@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 267915170}
   - component: {fileID: 267915169}
   - component: {fileID: 267915173}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1790,11 +1790,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   animator: {fileID: 744850853}
-  attackPoint: {fileID: 1584989894}
   attackRange: 0.8
+  attackPoint: {fileID: 1584989894}
+  spearDamage: 25
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  attackRate: 1
 --- !u!212 &744850852
 SpriteRenderer:
   serializedVersion: 3
@@ -3573,6 +3575,8 @@ GameObject:
   - component: {fileID: 1885324114}
   - component: {fileID: 1885324116}
   - component: {fileID: 1885324117}
+  - component: {fileID: 1885324119}
+  - component: {fileID: 1885324118}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -3728,6 +3732,42 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.72, y: 1.28}
   m_EdgeRadius: 0
+--- !u!95 &1885324118
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885324113}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de5c2c6d973e0dc45b69800c576eaeec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1885324119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885324113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb72966e08d627344a4ab8347c364d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
+  maxHealth: 100
+  animator: {fileID: 1885324118}
 --- !u!1 &1913088426
 GameObject:
   m_ObjectHideFlags: 0
