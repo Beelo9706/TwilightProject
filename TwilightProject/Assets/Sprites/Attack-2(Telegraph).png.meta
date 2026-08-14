@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2e69919d77ef592449abd2f2f2bc504f
+guid: 111ae9d451051fa48bf7cf4f44a44806
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8164479278471825566
-    second: Attack-2_0
+      213: 8027698011410519954
+    second: Attack-2(Telegraph)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack-2_0
+      name: Attack-2(Telegraph)_0
       rect:
         serializedVersion: 2
         x: 71
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e98c95185ae0e4170800000000000000
-      internalID: 8164479278471825566
+      spriteID: 297db3e0fcc186f60800000000000000
+      internalID: 8027698011410519954
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Attack-2_0: 8164479278471825566
+      Attack-2(Telegraph)_0: 8027698011410519954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

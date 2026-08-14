@@ -6,6 +6,8 @@ using UnityEngine.Rendering;
 public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D rb;
+
+    public Animator animator;
     public float playerSpeed;
     [SerializeField] private Transform isGrounded;
     public float jumpHeight;
@@ -13,13 +15,30 @@ public class PlayerScript : MonoBehaviour
     public float fallMultiplier = 1.5f;
     public float lowJumpMultiplier = 1;
 
+    public int maxHealth = 100;
+    int currentHealth;
+
+
 
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
-    void Update()
+    public void PlayerHurt(int damage)
+    {
+        currentHealth -= damage;
+
+        animator.SetTrigger("Hurt");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+
+    }
+
+        void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         
@@ -50,15 +69,18 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        
-
-
-    }
+    
 
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(isGrounded.position, 0.2f, groundLayer);
+    }
+
+    void Die()
+    {
+        Debug.Log("Player Died");
+        this.enabled = false;
+
+        GetComponent<Collider2D>().enabled = false;
     }
 }

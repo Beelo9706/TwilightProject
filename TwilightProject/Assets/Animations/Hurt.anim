@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyHurt
+  m_Name: Hurt
   serializedVersion: 8
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -6824593149415861596, guid: f4c5afb24746f0a4cae21ddc4ad4cc0b, type: 3}
+      value: {fileID: 8298115716793817426, guid: 8c3c8aa0cc2c2f34d9e8691e5382ec9d, type: 3}
     - time: 0.083333336
-      value: {fileID: -6824593149415861596, guid: f4c5afb24746f0a4cae21ddc4ad4cc0b, type: 3}
+      value: {fileID: 8298115716793817426, guid: 8c3c8aa0cc2c2f34d9e8691e5382ec9d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -47,8 +47,8 @@ AnimationClip:
       isSerializeReferenceCurve: 0
       metaData: 0
     pptrCurveMapping:
-    - {fileID: -6824593149415861596, guid: f4c5afb24746f0a4cae21ddc4ad4cc0b, type: 3}
-    - {fileID: -6824593149415861596, guid: f4c5afb24746f0a4cae21ddc4ad4cc0b, type: 3}
+    - {fileID: 8298115716793817426, guid: 8c3c8aa0cc2c2f34d9e8691e5382ec9d, type: 3}
+    - {fileID: 8298115716793817426, guid: 8c3c8aa0cc2c2f34d9e8691e5382ec9d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
