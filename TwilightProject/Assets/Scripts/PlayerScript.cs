@@ -13,10 +13,17 @@ public class PlayerScript : MonoBehaviour
     public float fallMultiplier = 1.5f;
     public float lowJumpMultiplier = 1;
 
+    public int maxHealth = 100;
+    int currentHealth;
+    public Animator playerAnimator;
+
+
+
+    
 
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     void Update()
@@ -50,15 +57,18 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        
-
-
-    }
+    
 
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(isGrounded.position, 0.2f, groundLayer);
+    }
+
+    void PlayerDie()
+    {
+        Debug.Log("Player Died");
+        this.enabled = false;
+
+        GetComponent<Collider2D>().enabled = false;
     }
 }
