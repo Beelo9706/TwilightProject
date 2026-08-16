@@ -17,8 +17,10 @@ public class EnemyScript : MonoBehaviour
     public float attackRate;
     float attackDelay;
     public Transform target;
-    public float attackRadius = 3;
+    public float attackRadius = 4;
     public float lookRadius = 15;
+
+    public Collider hitBox1;
 
 
     void Start()
@@ -62,6 +64,16 @@ public class EnemyScript : MonoBehaviour
     void AttackOne()
     {
 
+    }
+
+    public void ColliderEnabled()
+    {
+        hitBox1.enabled = true;
+    }
+
+    public void ColliderDisabled()
+    {
+        hitBox1.enabled = false;
     }
 
 
