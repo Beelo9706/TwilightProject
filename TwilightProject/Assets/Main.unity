@@ -3647,15 +3647,13 @@ MonoBehaviour:
   animator: {fileID: 1757158530}
   attackRange: 5
   attackPoint: {fileID: 2144307089}
-  enemyDamage: 10
-  enemyLayer:
+  playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   attackRate: 2.5
   target: {fileID: 267915172}
   attackRadius: 5
   lookRadius: 15
-  hitBox1: {fileID: 0}
 --- !u!4 &1757158532
 Transform:
   m_ObjectHideFlags: 0
@@ -4370,6 +4368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2144307089}
   - component: {fileID: 2144307090}
+  - component: {fileID: 2144307091}
   m_Layer: 6
   m_Name: AttackPoint
   m_TagString: Untagged
@@ -4438,6 +4437,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3082832, y: 1.20292}
   m_EdgeRadius: 0
+--- !u!114 &2144307091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144307088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1e58d8020d27c46b5f1d3a199ff1ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

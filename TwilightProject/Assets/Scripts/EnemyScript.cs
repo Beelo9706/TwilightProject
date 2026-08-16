@@ -11,8 +11,8 @@ public class EnemyScript : MonoBehaviour
 
     public float attackRange = 0.5f;
     public Transform attackPoint;
-    public int enemyDamage = 25;
-    public LayerMask enemyLayer;
+    static public int enemyDamage = 25;
+    public LayerMask playerLayer;
 
     public float attackRate;
     float attackDelay;
@@ -20,7 +20,7 @@ public class EnemyScript : MonoBehaviour
     public float attackRadius = 4;
     public float lookRadius = 15;
 
-    public Collider hitBox1;
+    
 
 
     void Start()
@@ -32,11 +32,18 @@ public class EnemyScript : MonoBehaviour
     {
         float distance = Vector2.Distance(target.position, transform.position);
 
-        if(distance <= attackRadius && PlayerScript.currentPlayerHealth > 0)
+        if (distance <= attackRadius && PlayerScript.currentPlayerHealth > 0)
         {
             AttackOne();
             attackDelay = Time.time + 1f / attackRate;
         }
+
+    }
+
+    void AttackOne()
+    {
+        animator.SetTrigger("AttackOne");
+
 
     }
 
@@ -61,10 +68,7 @@ public class EnemyScript : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
     }
 
-    void AttackOne()
-    {
-
-    }
+    
 
     public void ColliderEnabled()
     {
