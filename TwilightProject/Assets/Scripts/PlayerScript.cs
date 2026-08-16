@@ -14,23 +14,23 @@ public class PlayerScript : MonoBehaviour
     public float lowJumpMultiplier = 1;
 
     public int maxHealth = 100;
-    int currentHealth;
+    static public int currentPlayerHealth;
 
     public Animator animator;
 
 
     void Start()
     {
-        currentHealth = maxHealth;
+        currentPlayerHealth = maxHealth;
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        currentPlayerHealth -= damage;
 
         animator.SetTrigger("Hurt");
 
-        if (currentHealth <= 0)
+        if (currentPlayerHealth <= 0)
         {
             Die();
         }
