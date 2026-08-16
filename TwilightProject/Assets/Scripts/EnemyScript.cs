@@ -68,12 +68,12 @@ public class EnemyScript : MonoBehaviour
 
     public void ColliderEnabled()
     {
-        hitBox1.enabled = true;
+        transform.GetChild(0).GetComponent<Collider2D>().enabled = true;
     }
 
     public void ColliderDisabled()
     {
-        hitBox1.enabled = false;
+        transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
     }
 
 
