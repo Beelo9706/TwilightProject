@@ -13,10 +13,36 @@ public class PlayerScript : MonoBehaviour
     public float fallMultiplier = 1.5f;
     public float lowJumpMultiplier = 1;
 
+    public int maxHealth = 100;
+    int currentHealth;
+
+    public Animator animator;
+
 
     void Start()
     {
-        
+        currentHealth = maxHealth;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        animator.SetTrigger("Hurt");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+
+    }
+
+    void Die()
+    {
+        Debug.Log("Player Died");
+        this.enabled = false;
+
+        GetComponent<Collider2D>().enabled = false;
     }
 
     void Update()
