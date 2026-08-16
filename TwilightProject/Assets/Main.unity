@@ -1821,7 +1821,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  attackRate: 2.5
+  attackRate: 1.5
 --- !u!212 &744850852
 SpriteRenderer:
   serializedVersion: 3
@@ -3645,7 +3645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   maxHealth: 100
   animator: {fileID: 1757158530}
-  attackRange: 0.5
+  attackRange: 5
   attackPoint: {fileID: 2144307089}
   enemyDamage: 10
   enemyLayer:
@@ -3653,7 +3653,7 @@ MonoBehaviour:
     m_Bits: 0
   attackRate: 2.5
   target: {fileID: 267915172}
-  attackRadius: 3
+  attackRadius: 5
   lookRadius: 15
 --- !u!4 &1757158532
 Transform:
@@ -3664,7 +3664,7 @@ Transform:
   m_GameObject: {fileID: 1757158529}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.31, y: -1.12, z: 0}
+  m_LocalPosition: {x: -5.31, y: 0.3, z: 0}
   m_LocalScale: {x: 3.0199, y: 3.6511, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4384,7 +4384,7 @@ Transform:
   m_GameObject: {fileID: 2144307088}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.352, y: -0.028, z: 0}
+  m_LocalPosition: {x: 0.388, y: 0.007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
